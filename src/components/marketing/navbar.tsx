@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import {
   Sheet,
   SheetContent,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -54,11 +55,15 @@ export function Navbar() {
         {/* Desktop right side actions */}
         <div className="hidden items-center gap-2 md:flex">
           <ThemeToggle />
-          <Button variant="outline" size="sm">
-            <LogIn className="size-4 mr-1" />
-            Log In
+          <Button asChild variant="outline" size="sm">
+            <a href="/login">
+              <LogIn className="size-4 mr-1" />
+              Log In
+            </a>
           </Button>
-          <Button size="sm">Request a Dumpster</Button>
+          <Button asChild size="sm">
+            <a href="#contact">Request a Dumpster</a>
+          </Button>
         </div>
 
         {/* Mobile actions */}
@@ -72,6 +77,7 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-72">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col gap-6 pt-8">
                 <Link
                   href="/"
@@ -101,12 +107,16 @@ export function Navbar() {
                     </a>
                   ))}
                 </nav>
-                <Button variant="outline" className="w-full" onClick={() => setMobileOpen(false)}>
-                  <LogIn className="size-4 mr-1" />
-                  Log In
+                <Button asChild variant="outline" className="w-full">
+                  <a href="/login" onClick={() => setMobileOpen(false)}>
+                    <LogIn className="size-4 mr-1" />
+                    Log In
+                  </a>
                 </Button>
-                <Button className="w-full" onClick={() => setMobileOpen(false)}>
-                  Request a Dumpster
+                <Button asChild className="w-full">
+                  <a href="#contact" onClick={() => setMobileOpen(false)}>
+                    Request a Dumpster
+                  </a>
                 </Button>
               </div>
             </SheetContent>

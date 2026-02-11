@@ -1,9 +1,19 @@
+"use client"
+
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
 export function CtaSection() {
+  const [submitted, setSubmitted] = useState(false)
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    // TODO: wire up to a server action or API route
+    setSubmitted(true)
+  }
   return (
     <section id="contact" className="relative py-24 px-4">
       {/* Primary background */}
@@ -12,7 +22,7 @@ export function CtaSection() {
         className="absolute inset-0 -z-10 opacity-10"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 1px 1px, hsl(var(--primary-foreground)) 1px, transparent 0)",
+            "radial-gradient(circle at 1px 1px, var(--color-primary-foreground) 1px, transparent 0)",
           backgroundSize: "32px 32px",
         }}
       />
@@ -36,38 +46,52 @@ export function CtaSection() {
               <CardTitle className="text-xl">Request a Quote</CardTitle>
             </CardHeader>
             <CardContent>
-              <form className="flex flex-col gap-4">
-                <Input
-                  type="text"
-                  placeholder="Name"
-                  aria-label="Name"
-                  required
-                />
-                <Input
-                  type="email"
-                  placeholder="Email"
-                  aria-label="Email"
-                  required
-                />
-                <Input
-                  type="tel"
-                  placeholder="Phone"
-                  aria-label="Phone"
-                />
-                <Input
-                  type="text"
-                  placeholder="Project Address"
-                  aria-label="Project Address"
-                />
-                <Textarea
-                  placeholder="Tell us about your project (size needed, timeline, etc.)"
-                  aria-label="Project details"
-                  rows={3}
-                />
-                <Button type="submit" size="lg" className="mt-2 w-full">
-                  Get a Quote
-                </Button>
-              </form>
+              {submitted ? (
+                <div className="py-8 text-center">
+                  <p className="text-lg font-semibold">Thank you!</p>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    We&apos;ll get back to you within 24 hours.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                  <Input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    aria-label="Name"
+                    required
+                  />
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    aria-label="Email"
+                    required
+                  />
+                  <Input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone"
+                    aria-label="Phone"
+                  />
+                  <Input
+                    type="text"
+                    name="address"
+                    placeholder="Project Address"
+                    aria-label="Project Address"
+                  />
+                  <Textarea
+                    name="details"
+                    placeholder="Tell us about your project (size needed, timeline, etc.)"
+                    aria-label="Project details"
+                    rows={3}
+                  />
+                  <Button type="submit" size="lg" className="mt-2 w-full">
+                    Get a Quote
+                  </Button>
+                </form>
+              )}
             </CardContent>
           </Card>
         </div>

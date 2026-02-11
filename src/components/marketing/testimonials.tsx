@@ -38,7 +38,7 @@ function StarRating() {
 
 export function Testimonials() {
   return (
-    <section className="py-24 px-4">
+    <section id="testimonials" className="py-24 px-4">
       <div className="mx-auto max-w-5xl">
         {/* Section heading */}
         <div className="mb-16 text-center">

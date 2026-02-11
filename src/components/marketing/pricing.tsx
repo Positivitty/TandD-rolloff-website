@@ -137,10 +137,11 @@ export function Pricing() {
 
               <CardFooter>
                 <Button
+                  asChild
                   className="w-full"
                   variant={size.popular ? "default" : "outline"}
                 >
-                  Order Now
+                  <a href="#contact">Order Now</a>
                 </Button>
               </CardFooter>
             </Card>

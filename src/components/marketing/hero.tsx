@@ -12,13 +12,13 @@ export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background gradient / pattern */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(var(--primary)/0.15),transparent)]" />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,transparent_60%,hsl(var(--background)))]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,var(--color-primary)/0.15,transparent)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_bottom,transparent_60%,var(--color-background))]" />
       <div
         className="absolute inset-0 -z-10 opacity-[0.03]"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)",
+            "radial-gradient(circle at 1px 1px, var(--color-foreground) 1px, transparent 0)",
           backgroundSize: "40px 40px",
         }}
       />
@@ -46,13 +46,17 @@ export function Hero() {
 
             {/* CTA buttons */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-base px-8">
-                Request a Dumpster
-                <ArrowRight className="size-4 ml-1" />
+              <Button asChild size="lg" className="text-base px-8">
+                <a href="#contact">
+                  Request a Dumpster
+                  <ArrowRight className="size-4 ml-1" />
+                </a>
               </Button>
-              <Button variant="outline" size="lg" className="text-base px-8">
-                <Phone className="size-4 mr-1" />
-                Call Us Today
+              <Button asChild variant="outline" size="lg" className="text-base px-8">
+                <a href="tel:+15551234567">
+                  <Phone className="size-4 mr-1" />
+                  Call Us Today
+                </a>
               </Button>
             </div>
 
@@ -95,8 +99,8 @@ export function Hero() {
                 </div>
               </div>
 
-              <Button className="w-full mt-4" variant="outline">
-                View Pricing & Details
+              <Button asChild className="w-full mt-4" variant="outline">
+                <a href="#pricing">View Pricing & Details</a>
               </Button>
             </div>
 
