@@ -24,7 +24,7 @@ export function CtaSection() {
               Ready to Streamline Your Operations?
             </h2>
             <p className="mt-4 text-lg text-primary-foreground/80">
-              Get started today and see how DumpsterPro can transform your waste
+              Get started today and see how T&D Rolloff can transform your waste
               management business. Fill out the form below and our team will
               reach out within 24 hours.
             </p>

@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 const testimonials = [
   {
     quote:
-      "DumpsterPro completely transformed how we run our business. Scheduling used to take hours each morning - now it takes minutes. Our drivers love the app too.",
+      "T&D Rolloff completely transformed how we run our business. Scheduling used to take hours each morning - now it takes minutes. Our drivers love the app too.",
     author: "Mike Reeves",
     role: "Owner, Reeves Waste Solutions",
   },
@@ -46,7 +46,7 @@ export function Testimonials() {
             Loved by Waste Management Professionals
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            See why businesses trust DumpsterPro to run their operations
+            See why businesses trust T&D Rolloff to run their operations
           </p>
         </div>
 

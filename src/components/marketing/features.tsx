@@ -70,7 +70,7 @@ export function Features() {
             Everything You Need to Run Your Business
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            From scheduling to billing, DumpsterPro gives you the tools to
+            From scheduling to billing, T&D Rolloff gives you the tools to
             manage your waste hauling operation in one place.
           </p>
         </div>

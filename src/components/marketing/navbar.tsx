@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Trash2, Menu } from "lucide-react"
+import Image from "next/image"
+import { Menu } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -27,8 +28,14 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Trash2 className="h-6 w-6 text-primary" />
-          <span className="text-lg font-bold tracking-tight">DumpsterPro</span>
+          <Image
+            src="/logo-icon.png"
+            alt="T&D Rolloff"
+            width={36}
+            height={36}
+            className="dark:brightness-200 dark:contrast-50"
+          />
+          <span className="text-lg font-bold tracking-tight">T&D Rolloff</span>
         </Link>
 
         {/* Desktop nav links */}
@@ -67,9 +74,15 @@ export function Navbar() {
                   className="flex items-center gap-2"
                   onClick={() => setMobileOpen(false)}
                 >
-                  <Trash2 className="h-6 w-6 text-primary" />
+                  <Image
+                    src="/logo-icon.png"
+                    alt="T&D Rolloff"
+                    width={36}
+                    height={36}
+                    className="dark:brightness-200 dark:contrast-50"
+                  />
                   <span className="text-lg font-bold tracking-tight">
-                    DumpsterPro
+                    T&D Rolloff
                   </span>
                 </Link>
                 <nav className="flex flex-col gap-4">

@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dumpster Rental Management",
-  description: "Professional dumpster rental and waste management platform",
+  title: "T&D Rolloff | Dumpster Rental & Waste Disposal",
+  description: "T&D Rolloff - Professional dumpster rental and waste disposal services",
 };
 
 export default function RootLayout({

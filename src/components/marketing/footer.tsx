@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Trash2, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import Image from "next/image"
+import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
 
 import { Separator } from "@/components/ui/separator"
 
@@ -47,13 +48,19 @@ export function Footer() {
           {/* Brand column */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2">
-              <Trash2 className="h-6 w-6" />
+              <Image
+                src="/logo-icon.png"
+                alt="T&D Rolloff"
+                width={32}
+                height={32}
+                className="brightness-200 contrast-50"
+              />
               <span className="text-lg font-bold tracking-tight">
-                DumpsterPro
+                T&D Rolloff
               </span>
             </Link>
             <p className="text-sm text-background/70 leading-relaxed">
-              The all-in-one platform for modern waste management businesses.
+              Professional dumpster rental and waste disposal services.
               Streamline operations, delight customers, and grow your business.
             </p>
             <div className="flex items-center gap-3 mt-2">
@@ -127,7 +134,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-sm text-background/60">
-            &copy; {new Date().getFullYear()} DumpsterPro. All rights reserved.
+            &copy; {new Date().getFullYear()} T&D Rolloff. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a
