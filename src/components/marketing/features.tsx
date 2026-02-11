@@ -1,10 +1,10 @@
 import {
+  ShoppingCart,
   CreditCard,
   Truck,
-  Users,
   Calendar,
   MapPin,
-  Smartphone,
+  Mail,
   type LucideIcon,
 } from "lucide-react"
 
@@ -23,40 +23,40 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    icon: CreditCard,
-    title: "Automatic Billing",
+    icon: ShoppingCart,
+    title: "Easy Online Ordering",
     description:
-      "Streamline revenue with ACH payments, automatic invoicing, and recurring billing — so you never chase a payment again.",
+      "Browse dumpster sizes, choose your rental dates, and place your order online — no phone call needed.",
+  },
+  {
+    icon: CreditCard,
+    title: "Online Payments",
+    description:
+      "Pay your invoices securely online through your customer account. We accept ACH bank transfers for hassle-free billing.",
   },
   {
     icon: Truck,
-    title: "Route Optimization",
+    title: "Fast Delivery & Pickup",
     description:
-      "Save time and fuel with GPS tracking, optimized delivery routes, and real-time dispatch for every truck in your fleet.",
-  },
-  {
-    icon: Users,
-    title: "Customer Portal",
-    description:
-      "Give customers a self-service portal for online payments, order tracking, and scheduling — reducing calls and boosting satisfaction.",
+      "We deliver your dumpster on time and pick it up when you're done. Same-day delivery available in our service area.",
   },
   {
     icon: Calendar,
-    title: "Smart Scheduling",
+    title: "Flexible Scheduling",
     description:
-      "Drag-and-drop calendar with built-in availability management makes it easy to schedule pickups, deliveries, and swaps.",
+      "Choose the delivery date and rental period that works for your project. Extend your rental anytime from your account.",
   },
   {
     icon: MapPin,
-    title: "GPS Tracking",
+    title: "Track Your Container",
     description:
-      "Know where every dumpster and driver is in real time with live fleet tracking and automatic delivery confirmations.",
+      "Log in to your account to check your order status, see delivery details, and know exactly when to expect pickup.",
   },
   {
-    icon: Smartphone,
-    title: "Mobile App",
+    icon: Mail,
+    title: "Get in Touch Anytime",
     description:
-      "Manage your entire operation on the go. Drivers get a dedicated mobile app for routes, status updates, and customer signatures.",
+      "Have questions? Send us a message through the website, call us, or email. Our team is here to help with any request.",
   },
 ]
 
@@ -67,11 +67,11 @@ export function Features() {
         {/* Section heading */}
         <div className="mx-auto mb-14 max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Everything You Need to Run Your Business
+            Why Choose T&D Rolloff?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            From scheduling to billing, T&D Rolloff gives you the tools to
-            manage your waste hauling operation in one place.
+            We make renting a dumpster simple. Order online, manage your
+            account, and pay — all in one place.
           </p>
         </div>
 

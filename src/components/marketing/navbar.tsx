@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu } from "lucide-react"
+import { Menu, LogIn } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -14,9 +14,9 @@ import {
 import { ThemeToggle } from "@/components/theme-toggle"
 
 const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Services", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Sizes & Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ]
 
@@ -54,7 +54,11 @@ export function Navbar() {
         {/* Desktop right side actions */}
         <div className="hidden items-center gap-2 md:flex">
           <ThemeToggle />
-          <Button>Get Started</Button>
+          <Button variant="outline" size="sm">
+            <LogIn className="size-4 mr-1" />
+            Log In
+          </Button>
+          <Button size="sm">Request a Dumpster</Button>
         </div>
 
         {/* Mobile actions */}
@@ -97,8 +101,12 @@ export function Navbar() {
                     </a>
                   ))}
                 </nav>
+                <Button variant="outline" className="w-full" onClick={() => setMobileOpen(false)}>
+                  <LogIn className="size-4 mr-1" />
+                  Log In
+                </Button>
                 <Button className="w-full" onClick={() => setMobileOpen(false)}>
-                  Get Started
+                  Request a Dumpster
                 </Button>
               </div>
             </SheetContent>

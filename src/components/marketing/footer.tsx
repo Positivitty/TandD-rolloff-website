@@ -5,22 +5,22 @@ import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 
 const footerLinks = {
-  product: {
-    title: "Product",
+  services: {
+    title: "Services",
     links: [
-      { label: "Features", href: "#features" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "Integrations", href: "#" },
-      { label: "API", href: "#" },
+      { label: "Dumpster Rental", href: "#pricing" },
+      { label: "Waste Disposal", href: "#features" },
+      { label: "Construction Cleanup", href: "#features" },
+      { label: "Residential Cleanouts", href: "#features" },
     ],
   },
   company: {
     title: "Company",
     links: [
-      { label: "About", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Careers", href: "#" },
+      { label: "About Us", href: "#" },
+      { label: "Service Areas", href: "#" },
       { label: "Contact", href: "#contact" },
+      { label: "Customer Login", href: "#" },
     ],
   },
   legal: {
@@ -61,7 +61,8 @@ export function Footer() {
             </Link>
             <p className="text-sm text-background/70 leading-relaxed">
               Professional dumpster rental and waste disposal services.
-              Streamline operations, delight customers, and grow your business.
+              Serving homeowners, contractors, and businesses with reliable
+              roll-off container delivery and pickup.
             </p>
             <div className="flex items-center gap-3 mt-2">
               {socialLinks.map((social) => (
@@ -77,11 +78,11 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Product column */}
+          {/* Services column */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold">{footerLinks.product.title}</h3>
+            <h3 className="text-sm font-semibold">{footerLinks.services.title}</h3>
             <ul className="flex flex-col gap-2">
-              {footerLinks.product.links.map((link) => (
+              {footerLinks.services.links.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}

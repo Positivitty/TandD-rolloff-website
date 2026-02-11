@@ -11,57 +11,69 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-interface PricingTier {
+interface DumpsterSize {
   name: string
+  yards: string
   price: string
-  period?: string
+  period: string
   description: string
-  features: string[]
+  details: string[]
   popular?: boolean
-  cta: string
 }
 
-const tiers: PricingTier[] = [
+const sizes: DumpsterSize[] = [
   {
-    name: "Starter",
-    price: "$99",
-    period: "/mo",
-    description: "For small operations",
-    features: [
-      "Up to 10 trucks",
-      "Basic billing",
-      "Customer portal",
-      "Email support",
+    name: "10 Yard",
+    yards: "10",
+    price: "$300",
+    period: "per rental",
+    description: "Perfect for small cleanouts",
+    details: [
+      "Holds ~3 pickup truck loads",
+      "Garage & basement cleanouts",
+      "Small remodeling projects",
+      "Up to 7-day rental included",
     ],
-    cta: "Get Started",
   },
   {
-    name: "Professional",
-    price: "$199",
-    period: "/mo",
-    description: "For growing businesses",
-    features: [
-      "Up to 50 trucks",
-      "Advanced billing & ACH",
-      "Route optimization",
-      "Priority support",
-      "Custom branding",
+    name: "20 Yard",
+    yards: "20",
+    price: "$400",
+    period: "per rental",
+    description: "Great for mid-size projects",
+    details: [
+      "Holds ~6 pickup truck loads",
+      "Kitchen & bathroom renovations",
+      "Roof tear-offs (single layer)",
+      "Up to 7-day rental included",
     ],
     popular: true,
-    cta: "Get Started",
   },
   {
-    name: "Enterprise",
-    price: "Custom",
-    description: "For large fleets",
-    features: [
-      "Unlimited trucks",
-      "Dedicated account manager",
-      "API access",
-      "Custom integrations",
-      "SLA guarantee",
+    name: "30 Yard",
+    yards: "30",
+    price: "$500",
+    period: "per rental",
+    description: "Ideal for construction jobs",
+    details: [
+      "Holds ~9 pickup truck loads",
+      "New construction debris",
+      "Large home renovations",
+      "Up to 7-day rental included",
     ],
-    cta: "Get Started",
+  },
+  {
+    name: "40 Yard",
+    yards: "40",
+    price: "$600",
+    period: "per rental",
+    description: "For the biggest projects",
+    details: [
+      "Holds ~12 pickup truck loads",
+      "Commercial demolition",
+      "Major construction projects",
+      "Up to 7-day rental included",
+    ],
   },
 ]
 
@@ -72,50 +84,51 @@ export function Pricing() {
         {/* Section heading */}
         <div className="mx-auto mb-14 max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Simple, Transparent Pricing
+            Dumpster Sizes & Pricing
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            No hidden fees. Cancel anytime.
+            Choose the right size for your project. All rentals include delivery,
+            pickup, and disposal.
           </p>
         </div>
 
         {/* Pricing cards */}
-        <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-3">
-          {tiers.map((tier) => (
+        <div className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {sizes.map((size) => (
             <Card
-              key={tier.name}
+              key={size.name}
               className={
-                tier.popular
+                size.popular
                   ? "relative border-primary shadow-lg lg:scale-105"
                   : "relative"
               }
             >
-              {tier.popular && (
+              {size.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                   <Badge>Most Popular</Badge>
                 </div>
               )}
 
               <CardHeader className="text-center">
-                <CardTitle className="text-xl">{tier.name}</CardTitle>
-                <CardDescription>{tier.description}</CardDescription>
+                <CardTitle className="text-xl">{size.name}</CardTitle>
+                <CardDescription>{size.description}</CardDescription>
                 <div className="mt-4">
                   <span className="text-4xl font-bold tracking-tight">
-                    {tier.price}
+                    {size.price}
                   </span>
-                  {tier.period && (
-                    <span className="text-muted-foreground">{tier.period}</span>
-                  )}
+                  <span className="text-sm text-muted-foreground ml-1">
+                    {size.period}
+                  </span>
                 </div>
               </CardHeader>
 
               <CardContent>
                 <ul className="flex flex-col gap-3">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2">
+                  {size.details.map((detail) => (
+                    <li key={detail} className="flex items-center gap-2">
                       <Check className="h-4 w-4 shrink-0 text-primary" />
                       <span className="text-sm text-muted-foreground">
-                        {feature}
+                        {detail}
                       </span>
                     </li>
                   ))}
@@ -125,9 +138,9 @@ export function Pricing() {
               <CardFooter>
                 <Button
                   className="w-full"
-                  variant={tier.popular ? "default" : "outline"}
+                  variant={size.popular ? "default" : "outline"}
                 >
-                  {tier.cta}
+                  Order Now
                 </Button>
               </CardFooter>
             </Card>

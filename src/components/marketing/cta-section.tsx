@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 
 export function CtaSection() {
   return (
@@ -21,19 +22,18 @@ export function CtaSection() {
           {/* Heading text */}
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-              Ready to Streamline Your Operations?
+              Ready to Rent a Dumpster?
             </h2>
             <p className="mt-4 text-lg text-primary-foreground/80">
-              Get started today and see how T&D Rolloff can transform your waste
-              management business. Fill out the form below and our team will
-              reach out within 24 hours.
+              Fill out the form below and our team will get back to you within
+              24 hours with a quote. Or give us a call for immediate assistance.
             </p>
           </div>
 
-          {/* Lead form card */}
+          {/* Contact form card */}
           <Card className="w-full max-w-lg">
             <CardHeader className="text-center">
-              <CardTitle className="text-xl">Get Started</CardTitle>
+              <CardTitle className="text-xl">Request a Quote</CardTitle>
             </CardHeader>
             <CardContent>
               <form className="flex flex-col gap-4">
@@ -56,11 +56,16 @@ export function CtaSection() {
                 />
                 <Input
                   type="text"
-                  placeholder="Company Name"
-                  aria-label="Company Name"
+                  placeholder="Project Address"
+                  aria-label="Project Address"
+                />
+                <Textarea
+                  placeholder="Tell us about your project (size needed, timeline, etc.)"
+                  aria-label="Project details"
+                  rows={3}
                 />
                 <Button type="submit" size="lg" className="mt-2 w-full">
-                  Get Started
+                  Get a Quote
                 </Button>
               </form>
             </CardContent>

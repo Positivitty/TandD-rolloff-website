@@ -1,26 +1,26 @@
-import { UserPlus, Settings, Rocket } from "lucide-react"
+import { ClipboardList, Truck, CircleCheckBig } from "lucide-react"
 
 const steps = [
   {
     number: "01",
-    title: "Sign Up",
+    title: "Request a Dumpster",
     description:
-      "Create your account and set up your business profile in minutes",
-    icon: UserPlus,
+      "Choose your dumpster size, pick your dates, and submit your order online or give us a call.",
+    icon: ClipboardList,
   },
   {
     number: "02",
-    title: "Configure",
+    title: "We Deliver",
     description:
-      "Add your fleet, set service areas, pricing, and billing preferences",
-    icon: Settings,
+      "We drop off the container at your location on the scheduled date, ready for you to fill up.",
+    icon: Truck,
   },
   {
     number: "03",
-    title: "Start Managing",
+    title: "We Pick Up",
     description:
-      "Begin dispatching, billing, and managing customers right away",
-    icon: Rocket,
+      "When you're done or your rental period ends, we haul it away and handle the disposal for you.",
+    icon: CircleCheckBig,
   },
 ]
 
@@ -31,10 +31,10 @@ export function HowItWorks() {
         {/* Section heading */}
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Get Started in 3 Simple Steps
+            How It Works
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            From sign-up to your first dispatch in no time
+            Renting a dumpster with T&D Rolloff is quick and easy
           </p>
         </div>
 

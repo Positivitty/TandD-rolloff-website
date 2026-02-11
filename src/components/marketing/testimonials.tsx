@@ -5,21 +5,21 @@ import { Card, CardContent } from "@/components/ui/card"
 const testimonials = [
   {
     quote:
-      "T&D Rolloff completely transformed how we run our business. Scheduling used to take hours each morning - now it takes minutes. Our drivers love the app too.",
-    author: "Mike Reeves",
-    role: "Owner, Reeves Waste Solutions",
+      "T&D Rolloff made my home renovation so much easier. Ordered a 20-yard dumpster online, it was delivered the next morning, and pickup was right on schedule. Super smooth experience.",
+    author: "Mike R.",
+    role: "Homeowner",
   },
   {
     quote:
-      "We went from spreadsheets and sticky notes to a fully automated workflow. Billing errors dropped to nearly zero and our revenue is up 30% since switching.",
-    author: "Sarah Thornton",
-    role: "Operations Manager, CleanHaul Services",
+      "We use T&D for all our job sites. The online ordering and billing saves us a ton of time, and they always deliver on schedule. Best dumpster rental service we've worked with.",
+    author: "Sarah T.",
+    role: "General Contractor",
   },
   {
     quote:
-      "The customer portal alone is worth the price. Our clients can schedule pickups and pay invoices online, which cut our phone volume in half. Incredible platform.",
-    author: "James Delgado",
-    role: "Co-Founder, Metro Dumpster Co.",
+      "I was cleaning out my parents' estate and had no idea what size dumpster I needed. The team helped me pick the right one, delivered it same-day, and the price was very fair.",
+    author: "James D.",
+    role: "Homeowner",
   },
 ]
 
@@ -43,10 +43,10 @@ export function Testimonials() {
         {/* Section heading */}
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Loved by Waste Management Professionals
+            What Our Customers Say
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            See why businesses trust T&D Rolloff to run their operations
+            See why homeowners and contractors trust T&D Rolloff
           </p>
         </div>
 

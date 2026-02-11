@@ -1,12 +1,12 @@
-import { ArrowRight, Truck, CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Phone, CheckCircle2 } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 
 const trustIndicators = [
-  "No credit card required",
-  "14-day free trial",
-  "Cancel anytime",
-];
+  "Same-day delivery available",
+  "Flexible rental periods",
+  "Competitive pricing",
+]
 
 export function Hero() {
   return (
@@ -28,31 +28,31 @@ export function Hero() {
           {/* Left column - copy */}
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <Badge variant="secondary" className="mb-6 px-3 py-1 text-sm">
-              <Truck className="size-3.5 mr-1" />
-              Trusted by 500+ waste businesses
+              Serving the Local Community
             </Badge>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
-              Simplify Your{" "}
-              <span className="text-primary">Waste Management</span>{" "}
-              Operations
+              Reliable{" "}
+              <span className="text-primary">Dumpster Rental</span>{" "}
+              & Waste Disposal
             </h1>
 
             <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-              The all-in-one platform that streamlines your dumpster rental
-              business with automated billing, intelligent route optimization,
-              and a self-service customer portal -- so you can focus on growing
-              your operation, not managing it.
+              Need a dumpster for your next project? T&D Rolloff makes it easy
+              to rent roll-off containers for construction, renovation,
+              cleanouts, and more. Order online, schedule delivery, and pay —
+              all from your account.
             </p>
 
             {/* CTA buttons */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="text-base px-8">
-                Start Free Trial
+                Request a Dumpster
                 <ArrowRight className="size-4 ml-1" />
               </Button>
               <Button variant="outline" size="lg" className="text-base px-8">
-                Watch Demo
+                <Phone className="size-4 mr-1" />
+                Call Us Today
               </Button>
             </div>
 
@@ -67,92 +67,44 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right column - dashboard mockup placeholder */}
+          {/* Right column - dumpster sizes visual */}
           <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
             <div className="relative rounded-2xl border border-border/50 bg-gradient-to-br from-primary/10 via-primary/5 to-background p-6 shadow-2xl shadow-primary/5">
-              {/* Mockup top bar */}
-              <div className="flex items-center gap-2 mb-4">
-                <div className="flex gap-1.5">
-                  <div className="size-3 rounded-full bg-red-400/70" />
-                  <div className="size-3 rounded-full bg-yellow-400/70" />
-                  <div className="size-3 rounded-full bg-green-400/70" />
+              <h3 className="text-lg font-semibold mb-4">Available Sizes</h3>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-lg border border-border/40 bg-background/60 p-4 text-center">
+                  <div className="text-3xl font-bold text-primary">10</div>
+                  <div className="text-sm text-muted-foreground">Yard</div>
+                  <div className="mt-1 text-xs text-muted-foreground">Small cleanouts</div>
                 </div>
-                <div className="ml-2 h-5 w-48 rounded-md bg-muted/60" />
-              </div>
-
-              {/* Mockup sidebar + main content */}
-              <div className="flex gap-4">
-                {/* Sidebar */}
-                <div className="hidden sm:flex w-28 flex-col gap-2">
-                  <div className="h-6 w-full rounded-md bg-primary/20" />
-                  <div className="h-6 w-full rounded-md bg-muted/40" />
-                  <div className="h-6 w-full rounded-md bg-muted/40" />
-                  <div className="h-6 w-full rounded-md bg-muted/40" />
-                  <div className="h-6 w-20 rounded-md bg-muted/40" />
+                <div className="rounded-lg border border-border/40 bg-background/60 p-4 text-center">
+                  <div className="text-3xl font-bold text-primary">20</div>
+                  <div className="text-sm text-muted-foreground">Yard</div>
+                  <div className="mt-1 text-xs text-muted-foreground">Renovations</div>
                 </div>
-
-                {/* Main content area */}
-                <div className="flex-1 flex flex-col gap-3">
-                  {/* Stat cards row */}
-                  <div className="grid grid-cols-3 gap-2">
-                    <div className="rounded-lg border border-border/40 bg-background/60 p-3">
-                      <div className="h-2.5 w-10 rounded bg-muted/60 mb-2" />
-                      <div className="h-5 w-14 rounded bg-primary/30" />
-                    </div>
-                    <div className="rounded-lg border border-border/40 bg-background/60 p-3">
-                      <div className="h-2.5 w-12 rounded bg-muted/60 mb-2" />
-                      <div className="h-5 w-10 rounded bg-primary/20" />
-                    </div>
-                    <div className="rounded-lg border border-border/40 bg-background/60 p-3">
-                      <div className="h-2.5 w-8 rounded bg-muted/60 mb-2" />
-                      <div className="h-5 w-12 rounded bg-primary/25" />
-                    </div>
-                  </div>
-
-                  {/* Chart placeholder */}
-                  <div className="rounded-lg border border-border/40 bg-background/60 p-4">
-                    <div className="h-2.5 w-20 rounded bg-muted/60 mb-3" />
-                    <div className="flex items-end gap-1.5 h-24">
-                      <div className="flex-1 rounded-t bg-primary/15 h-[40%]" />
-                      <div className="flex-1 rounded-t bg-primary/25 h-[60%]" />
-                      <div className="flex-1 rounded-t bg-primary/20 h-[45%]" />
-                      <div className="flex-1 rounded-t bg-primary/35 h-[75%]" />
-                      <div className="flex-1 rounded-t bg-primary/30 h-[65%]" />
-                      <div className="flex-1 rounded-t bg-primary/40 h-[85%]" />
-                      <div className="flex-1 rounded-t bg-primary/45 h-full" />
-                    </div>
-                  </div>
-
-                  {/* Table placeholder rows */}
-                  <div className="rounded-lg border border-border/40 bg-background/60 p-3 flex flex-col gap-2">
-                    <div className="flex gap-3">
-                      <div className="h-3 w-16 rounded bg-muted/50" />
-                      <div className="h-3 w-24 rounded bg-muted/50" />
-                      <div className="h-3 flex-1 rounded bg-muted/30" />
-                      <div className="h-3 w-12 rounded bg-primary/20" />
-                    </div>
-                    <div className="flex gap-3">
-                      <div className="h-3 w-16 rounded bg-muted/40" />
-                      <div className="h-3 w-24 rounded bg-muted/40" />
-                      <div className="h-3 flex-1 rounded bg-muted/25" />
-                      <div className="h-3 w-12 rounded bg-primary/15" />
-                    </div>
-                    <div className="flex gap-3">
-                      <div className="h-3 w-16 rounded bg-muted/35" />
-                      <div className="h-3 w-24 rounded bg-muted/35" />
-                      <div className="h-3 flex-1 rounded bg-muted/20" />
-                      <div className="h-3 w-12 rounded bg-primary/10" />
-                    </div>
-                  </div>
+                <div className="rounded-lg border border-border/40 bg-background/60 p-4 text-center">
+                  <div className="text-3xl font-bold text-primary">30</div>
+                  <div className="text-sm text-muted-foreground">Yard</div>
+                  <div className="mt-1 text-xs text-muted-foreground">Construction</div>
+                </div>
+                <div className="rounded-lg border border-border/40 bg-background/60 p-4 text-center">
+                  <div className="text-3xl font-bold text-primary">40</div>
+                  <div className="text-sm text-muted-foreground">Yard</div>
+                  <div className="mt-1 text-xs text-muted-foreground">Large projects</div>
                 </div>
               </div>
+
+              <Button className="w-full mt-4" variant="outline">
+                View Pricing & Details
+              </Button>
             </div>
 
-            {/* Decorative glow behind the mockup */}
+            {/* Decorative glow behind the card */}
             <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-primary/20 via-transparent to-primary/10 blur-2xl" />
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
